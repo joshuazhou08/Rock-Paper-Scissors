@@ -24,7 +24,6 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
     if (computerSelection === "rock"){
         if (playerChoice === "rock"){
             console.log("Tie! Both chose rock. Replay.");
-            return playRound(prompt("Rock, paper, scissors!"), getComputerChoice());
         }
         else if (playerChoice === "paper"){
             console.log(`You win! ${playerChoice[0].toUpperCase() + playerChoice.slice(1)} beats ${computerSelection}`) ;
@@ -43,7 +42,6 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
         }
         else if (playerChoice === "paper"){
             console.log("Tie! Both chose paper. Replay.");
-            return playRound(prompt("Rock, paper, scissors!"), getComputerChoice());
         }
         else {
             console.log(`You win! ${playerChoice[0].toUpperCase() + playerChoice.slice(1)} beats ${computerSelection}`);
@@ -62,7 +60,6 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
         }
         else {
             console.log("Tie! Both chose scissors. Replay.");
-            return playRound(prompt("Rock, paper, scissors!"), getComputerChoice());
         }
     }
 }
@@ -70,12 +67,9 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
 let playerScore = 0;
 let computerScore = 0;
 //Call all our functions and play the game until the player no longer wants to
-let keepGoing = true;
-while (keepGoing) {
-    playRound(prompt("Rock, paper, scissors!"), getComputerChoice());
-    let playAgain = prompt("Do you want to play again?");
-    //check if the player said no
-    keepGoing = playAgain.toLowerCase() === "no" ? false : true;
-}
-console.log(`Computer Final Score: ${computerScore}`)
-console.log(`Your Final Score: ${playerScore}`)
+const rockButton = document.querySelector("#rock-btn")
+const paperButton = document.querySelector("#paper-btn")
+const scissorButton = document.querySelector('#scissor-btn')
+rockButton.addEventListener('click', function(){playRound("rock", getComputerChoice())})
+paperButton.addEventListener('click',function(){playRound("paper", getComputerChoice())})
+scissorButton.addEventListener('click', function(){playRound("scissors", getComputerChoice())})
