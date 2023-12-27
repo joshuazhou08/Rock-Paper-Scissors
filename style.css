@@ -1,0 +1,76 @@
+body {
+    margin: 8px;
+}
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > .header {
+    width: 40%;
+    background-color: rgb(51, 51, 51);
+    border-radius: 20px;
+    margin: 16px 0;
+}
+.container >.header > p{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+.game {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.player {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+}
+.player-buttons {
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.player-buttons button {
+    width: 250px;
+    margin: 8px;
+    height: 250px;
+    border-radius: 125px;
+    border-color: black;
+    border-width: 5px;
+    box-shadow:red 0px 1px 10px;
+    padding: 10px;
+    background-size: 170px 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#rock-btn{
+    background-image: url(images/Rock-Flat-icon.png);
+
+}
+
+#paper-btn {
+    background-image: url(images/Paper.png);
+}
+
+#scissor-btn {
+    background-image: url(images/Scissor-icon.png);
+}
+
+.score {
+    align-self: center;
+    text-align: center;
+}
+.computer{
+    width: 550px;
+    text-align: center;
+    margin-right: 5%;
+}
+
