@@ -67,6 +67,9 @@ body {
 .score {
     align-self: center;
     text-align: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 .computer{
     width: 550px;

@@ -62,11 +62,18 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
             console.log("Tie! Both chose scissors. Replay.");
         }
     }
+    playerScoreDisp.textContent = `Player: ${playerScore}`
+    computerScoreDisp.textContent = `Computer: ${computerScore}`
 }
 //Initialize the scores in the variables playerScore and computerScore
 let playerScore = 0;
 let computerScore = 0;
-//Call all our functions and play the game until the player no longer wants to
+const result = document.querySelector(".score > #results")
+const  playerScoreDisp = document.querySelector(".playerScore")
+const  computerScoreDisp = document.querySelector(".computerScore")
+playerScoreDisp.textContent = `Player: ${playerScore}`
+computerScoreDisp.textContent = `Computer: ${computerScore}`
+//Make buttons reponsive to clicks
 const rockButton = document.querySelector("#rock-btn")
 const paperButton = document.querySelector("#paper-btn")
 const scissorButton = document.querySelector('#scissor-btn')
